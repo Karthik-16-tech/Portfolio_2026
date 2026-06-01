@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Vite logo">
+  <defs>
+    <linearGradient id="vite-a" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#41d1ff" />
+      <stop offset="100%" stop-color="#bd34fe" />
+    </linearGradient>
+    <linearGradient id="vite-b" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffe54c" />
+      <stop offset="100%" stop-color="#ff6b00" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#vite-a)" d="M128 16 45 36.2 30 127.6 128 240l98-112.4-15-91.4Z" />
+  <path fill="url(#vite-b)" d="M128 40.5 71.6 51.9 60 116.3 128 208l68-91.7-11.6-64.4Z" opacity="0.9" />
+  <path fill="#ffffff" d="M130.5 69.5 96.2 103l20.3 20.9-12.1 12.3 23.1 23.7 34.2-33.5-20.2-20.8 12.1-12.4Z" opacity="0.98" />
+</svg>

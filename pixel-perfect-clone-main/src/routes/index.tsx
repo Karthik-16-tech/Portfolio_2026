@@ -512,9 +512,9 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-display font-bold text-xl tracking-tight">Karthik</div>
           <div className="flex gap-8 font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-            <a href="https://github.com/Karthik-16-tech" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/karthik-palla-09a281335/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
-            <a href="https://www.instagram.com/k_a_r_t_h_i_k___16/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="https://github.com/Karthik-16-tech" target="_blank" rel="noreferrer noopener" className="hover:text-primary transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/karthik-palla-09a281335/" target="_blank" rel="noreferrer noopener" className="hover:text-primary transition-colors">LinkedIn</a>
+            <a href="https://www.instagram.com/k_a_r_t_h_i_k___16/" target="_blank" rel="noreferrer noopener" className="hover:text-primary transition-colors">Instagram</a>
           </div>
           <div className="text-xs text-muted-foreground">© 2026 Karthik.</div>
         </div>
