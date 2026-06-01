@@ -1,0 +1,28 @@
+---
+name: Code Ownership
+# This file defines code ownership for the repository
+
+# Default owners
+* @Karthik-16-tech
+
+# Documentation
+/README.md @Karthik-16-tech
+/DEPLOYMENT.md @Karthik-16-tech
+/OPTIMIZATION.md @Karthik-16-tech
+/CONTRIBUTING.md @Karthik-16-tech
+
+# Configuration files
+vercel.json @Karthik-16-tech
+vite.config.ts @Karthik-16-tech
+wrangler.jsonc @Karthik-16-tech
+package.json @Karthik-16-tech
+
+# GitHub workflows
+.github/workflows/ @Karthik-16-tech
+
+# Core components
+/src/components/ @Karthik-16-tech
+/src/routes/ @Karthik-16-tech
+
+# Styles
+/src/styles/ @Karthik-16-tech
