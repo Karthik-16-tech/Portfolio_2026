@@ -1,0 +1,145 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Inter Tight", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+  --ease-studio: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  --radius: 1rem;
+  --background: hsl(240 10% 3%);
+  --foreground: hsl(0 0% 98%);
+  --muted: hsl(240 5% 12%);
+  --muted-foreground: hsl(240 5% 65%);
+  --primary: hsl(250 100% 75%);
+  --primary-foreground: hsl(240 10% 3%);
+  --secondary: hsl(240 5% 10%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --accent: hsl(240 5% 12%);
+  --accent-foreground: hsl(0 0% 98%);
+  --border: hsl(240 5% 15%);
+  --input: hsl(240 5% 15%);
+  --ring: hsl(250 100% 75%);
+  --card: hsl(240 8% 5%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(240 8% 5%);
+  --popover-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 98%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.35; }
+  50% { transform: translateY(-20px) scale(1.05); opacity: 0.55; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-soft {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-reveal {
+  animation: reveal 0.9s var(--ease-studio) both;
+}
+
+.animate-reveal-soft {
+  animation: reveal-soft 0.7s var(--ease-studio) both;
+}
+
+.glow-orb {
+  background: radial-gradient(circle at center, hsl(250 100% 75%) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Premium hero typography helpers */
+.heading-gradient {
+  background: linear-gradient(90deg,#b48cff,#8b5cf6 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.top-label-outline {
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+}
+
+.btn-primary {
+  border-radius: 12px;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html {
+    scroll-behavior: auto;
+  }
+  html.lenis {
+    scroll-behavior: auto !important;
+  }
+  html.lenis body {
+    height: auto;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Defer paint for off-screen sections (not on #projects — breaks ScrollTrigger pole measure) */
+.scroll-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+#projects {
+  content-visibility: visible;
+}
